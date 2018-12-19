@@ -1,28 +1,37 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-class App extends Component {
+class App extends React.Component {
+  state = {
+    data: null
+  };
+  componentDidMount() {
+    fetch("https://randomuser.me/api?results=15")
+      .then(response => response.json())
+      .then(data =>
+        this.setState({
+          data: data.results
+        })
+      );
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        {this.state.data &&
+          this.state.data.map(user => (
+            <div key={user.login.uuid}>
+              <div>
+                <img src={user.picture.thumbnail} />
+              </div>
+              <div>
+                {user.name.first} {user.name.last}
+              </div>
+              <div>
+                <a href="mailto: {user.email}">{user.email}</a>
+              </div>
+            </div>
+          ))}
       </div>
     );
   }
 }
-
 export default App;
