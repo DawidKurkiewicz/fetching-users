@@ -22,8 +22,9 @@ class Users extends React.Component {
     return (
       <div>
         <ReactTable
+          className={'-striped'}
           data={this.state.data}
-          filterable={true}
+          filterable
           columns={[{
             Header: 'First Name',
             accessor: 'name.first'
