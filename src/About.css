@@ -1,0 +1,11 @@
+.container {
+    text-align: center;
+    background-color: grey
+}
+.title {
+text-transform: uppercase;
+margin: 20px
+}
+.item-container {
+    border: 2px dashed black
+}

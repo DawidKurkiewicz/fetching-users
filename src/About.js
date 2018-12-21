@@ -1,14 +1,16 @@
 import React from 'react'
+import './About.css'
+
 
 
 const About = (props) => (
     <div className='container'>
         <div className="title">
-            Jak działamy
+            <h1>Jak działamy</h1>
             </div>
         <div class="item-container">
             <div class="text-container">
-                Zorientowanie na cel
+               <h2> Zorientowanie na cel</h2>
                 <p>Jesteśmy zespołem nakierowanym na cel. W pierwszej kolejności wspólnie z
                     Państwem przeprowadzamy analizę wymagań biznesowych oraz rynku.
                     Dobór narzędzi technologicznych oraz kompetencji potrzebnych przy
@@ -18,7 +20,7 @@ const About = (props) => (
         </div>
         <div class="item-container">
             <div class="text-container">
-                Jakość
+                <h2> Jakość</h2>
                 <p>W naszej pracy przywiązujemy ogromną wagę do jakości.
                     Przede wszystkim kierujemy się najlepszymi praktykami i wysokimi standardami,
                     które pozwalają nam zrozumieć problem oraz
@@ -27,7 +29,7 @@ const About = (props) => (
         </div>
         <div class="item-container">
             <div class="text-container">
-                Opieka, wsparcie, serwis
+               <h2> Opieka, wsparcie, serwis</h2>
                 <p>Działamy kompleksowo, posiadamy szeroki zakres kompetencji dzięki czemu, zapewniamy
                     Państwu komfort oraz bezpieczeństwo. Pomagamy na wszystkich
                     etapach projektu począwszy od określenia wymagań, aż do
