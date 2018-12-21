@@ -18,18 +18,22 @@ class Users extends React.Component {
   }
   render() {
     return (
-      <div>
+        <ReactTable
+            data={this.state.data}
+            columns={[{
+                Header: 'First Name',
+                accessor: 'name.first'
+            }, {
+                Header: 'Last Name',
+                accessor: 'name.last'
+            }]}
+            defaultPageSize = {5}
+            showPageSizeOptions={false}
 
-        {this.state.data &&
-          this.state.data.map(user => (
-            <div key={user.login.uuid}>
-              <div>
-                {user.name.first} {user.name.last}
-              </div>
-            </div>
-          ))}
-      </div>
-    );
-  }
+        />
+
+    )
 }
+}
+
 export default Users;
