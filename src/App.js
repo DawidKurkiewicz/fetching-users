@@ -1,8 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
+import ReactTable from "react-table";
+import "react-table/react-table.css";
+
 
 class App extends React.Component {
   state = {
-    data: null
+    data: []
   };
   componentDidMount() {
     fetch("https://randomuser.me/api?results=15")
@@ -16,17 +19,12 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        
         {this.state.data &&
           this.state.data.map(user => (
             <div key={user.login.uuid}>
               <div>
-                <img src={user.picture.thumbnail} />
-              </div>
-              <div>
                 {user.name.first} {user.name.last}
-              </div>
-              <div>
-                <a href="mailto: {user.email}">{user.email}</a>
               </div>
             </div>
           ))}
