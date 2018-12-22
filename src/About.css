@@ -1,6 +1,8 @@
 .container {
     text-align: center;
-    background-color: grey
+    background-color: grey;
+    margin: 10px
+
 }
 .title {
 text-transform: uppercase;
