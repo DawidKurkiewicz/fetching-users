@@ -1,6 +1,10 @@
 import React from 'react'
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer'
+
+const style = {
+    textAlign: "center"
+}
 class Navbar extends React.Component {
     state = {
         isDrawerOpen: false
@@ -12,6 +16,7 @@ class Navbar extends React.Component {
                 <AppBar
                     title={"Recrutation Task"}
                     onLeftIconButtonClick={this.toggleDrawer}
+                    style={style}
 
                 />
                 <Drawer
