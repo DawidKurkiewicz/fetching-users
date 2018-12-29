@@ -39,6 +39,7 @@ class App extends React.PureComponent {
 
               <Route path="/" exact={true} component={Users}></Route>
               <Route path='/users' component={Users}></Route>
+              <Route path='/:id([1-4])' component={Users} />
               <Route path='/about' component={About}></Route>
               <Route component={BadUrl} />
             </Switch>
