@@ -9,6 +9,7 @@ class Users extends React.Component {
     searchText: ''
 
   };
+
   componentDidMount() {
     fetch("https://randomuser.me/api?results=15")
       .then(response => response.json())
@@ -16,8 +17,9 @@ class Users extends React.Component {
         this.setState({
           data: data.results
         })
-      );
-  }
+      )
+  };
+
   render() {
     return (
       <div>
@@ -34,12 +36,11 @@ class Users extends React.Component {
           }]}
           defaultPageSize={5}
           showPageSizeOptions={false}
-
         />
       </div>
 
     )
-  }
-}
+  };
+};
 
 export default Users;

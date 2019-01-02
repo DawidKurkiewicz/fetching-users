@@ -1,14 +1,16 @@
-import React from 'react'
+import React from 'react';
 import AppBar from 'material-ui/AppBar';
-import Drawer from 'material-ui/Drawer'
+import Drawer from 'material-ui/Drawer';
 
 const style = {
     textAlign: "center"
-}
+};
+
 class Navbar extends React.Component {
     state = {
         isDrawerOpen: false
-    }
+    };
+
     toggleDrawer = () => this.setState({ isDrawerOpen: !this.state.isDrawerOpen })
     render() {
         return (
@@ -45,12 +47,12 @@ class Navbar extends React.Component {
                             :
                             null
 
-                    }
+                    };
                 </Drawer>
             </div>
         )
-    }
+    };
 
-}
+};
 
 export default Navbar

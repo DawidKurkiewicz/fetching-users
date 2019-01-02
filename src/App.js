@@ -1,16 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
-import MenuItem from 'material-ui/MenuItem'
-import Navbar from './Menu'
-import Users from './Users'
-import About from './About'
-import BadUrl from './BadUrl'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import MenuItem from 'material-ui/MenuItem';
+import Navbar from './Navigation/Menu';
+import Users from './components/Users';
+import About from './components/About';
+import BadUrl from './components/BadUrl';
 
 const style = {
   links: {
     textDecoration: 'none'
   }
-}
+};
 
 class App extends React.PureComponent {
   render() {
@@ -36,7 +36,6 @@ class App extends React.PureComponent {
           </Navbar>
           <div>
             <Switch>
-
               <Route path="/" exact={true} component={Users}></Route>
               <Route path='/users' component={Users}></Route>
               <Route path='/:id([1-4])' component={Users} />
@@ -47,7 +46,7 @@ class App extends React.PureComponent {
         </div>
       </Router>
     )
-  }
-}
+  };
+};
 
 export default App;
