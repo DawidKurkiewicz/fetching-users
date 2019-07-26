@@ -11,18 +11,26 @@ class Users extends React.Component {
   };
 
   componentDidMount() {
-    fetch("https://randomuser.me/api?results=15")
+    const input = document.querySelector(".input")
+    document.querySelector(".button").addEventListener("click", ()=>{
+      fetch(`https://randomuser.me/api?results=${input.value}`)
       .then(response => response.json())
       .then(data =>
         this.setState({
           data: data.results
         })
       )
+    })
+  
   };
 
   render() {
     return (
       <div>
+        <div style={{display:"flex", justifyContent:"center"}} className={"center"}>
+        <input className={"input"} type={"number"} placeholder="Type your number here"></input>
+        <button style={{padding:"10px"}}  className={"button"}>Get users Data</button>
+        </div>
         <ReactTable
           className={'-striped'}
           data={this.state.data}
@@ -34,8 +42,8 @@ class Users extends React.Component {
             Header: 'Last Name',
             accessor: 'name.last'
           }]}
-          defaultPageSize={5}
-          showPageSizeOptions={false}
+          defaultPageSize={10}
+          showPageSizeOptions={true}
         />
       </div>
 

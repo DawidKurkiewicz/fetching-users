@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import MenuItem from 'material-ui/MenuItem';
 import Navbar from './Navigation/Menu';
-import Users from './components/Users';
-import About from './components/About';
-import BadUrl from './components/BadUrl';
+import Users from './Components/Users';
+import About from './Components/About';
+import BadUrl from './Components/BadUrl';
 
 const style = {
   links: {
