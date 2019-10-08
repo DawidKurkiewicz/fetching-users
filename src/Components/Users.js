@@ -28,7 +28,7 @@ class Users extends React.Component {
     return (
       <div>
         <div style={{display:"flex", justifyContent:"center"}} className={"center"}>
-        <input className={"input"} type={"number"} placeholder="Type your number here"></input>
+        <input className={"input"} type={"number"} value=1 placeholder="Type your number here"></input>
         <button style={{padding:"10px"}}  className={"button"}>Get users Data</button>
         </div>
         <ReactTable
